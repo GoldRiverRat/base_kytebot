@@ -1,5 +1,5 @@
 #include "encoder.h"
-#include "tension.h"
+#include "hx711.h"
 #include "motor.h"
 #include "esp_log.h"
 #include "freertos/task.h"

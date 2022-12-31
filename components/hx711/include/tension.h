@@ -1,3 +1,0 @@
-
-
-void tension(void);
