@@ -1,8 +1,4 @@
-#include "esp_log.h"
-#include <freertos/FreeRTOS.h>
-#include <freertos/task.h>
-#include <C:\Users\byron\esp\esp-idf\components\esp_timer\include\esp_timer.h>
-#include <C:\Users\byron\esp\esp-idf\uncleRemus\esp-idf-lib\components\esp_idf_lib_helpers\ets_sys.h>
+
 #include "hx711.h"
 
 #define CHECK(x) do { esp_err_t __; if ((__ = x) != ESP_OK) return __; } while (0)

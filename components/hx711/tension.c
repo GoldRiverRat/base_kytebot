@@ -3,6 +3,7 @@
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <hx711.h>
+// #include <tension.h>
 
 static const char *TAG = "hx711-example";
 
