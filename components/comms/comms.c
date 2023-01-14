@@ -3,5 +3,5 @@
 
 void func(void)
 {
-  console.log("hi from comms")
+  // console.log("hi from comms");
 }
