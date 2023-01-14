@@ -38,7 +38,7 @@ void tension(void)
             continue;
         }
 
-        // ESP_LOGI(TAG, "Raw data: %" PRIi32, data);
+        ESP_LOGI(TAG, "Raw data: %" PRIi32, data);
         left_tension = data;
         vTaskDelay(CYCLETIME / portTICK_PERIOD_MS);
     }

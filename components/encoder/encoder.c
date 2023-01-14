@@ -71,7 +71,7 @@ void encoder(void)
     int pulse_count = 0;
     while (1) {
         ESP_ERROR_CHECK(pcnt_unit_get_count(pcnt_unit, &pulse_count));
-        // ESP_LOGI(TAG, "Pulse count: %d", pulse_count);
+        ESP_LOGI(TAG, "Pulse count: %d", pulse_count);
         curr_pos = pulse_count;
         vTaskDelay(CYCLETIME / portTICK_PERIOD_MS);
     }

@@ -8,6 +8,6 @@
 #define EXAMPLE_PCNT_LOW_LIMIT  -10000
 #define ENCODER_GPIO_A 17
 #define ENCODER_GPIO_B 5
-#define CYCLETIME 100
+#define CYCLETIME 1000
 
 void encoder(void);

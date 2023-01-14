@@ -8,7 +8,7 @@
 #include <esp_err.h>
 #include <inttypes.h>
 
-#define CYCLETIME 100
+#define CYCLETIME 1000
 
 void tension(void);
 

@@ -10,6 +10,6 @@
 #define MOTOR_PWM 02
 #define LEDC_HS_CH0_CHANNEL LEDC_CHANNEL_0
 #define LEDC_DUTY_MAX 8200
-#define CYCLETIME 100
+#define CYCLETIME 1000
 
 void PID_motor(void);
