@@ -1,9 +1,13 @@
 #include "motor.h"
 
+static const char *TAG = "MOTOR";
+
 void PID_motor(void)
 {
     extern int move_to;
     extern int curr_pos;
+    ESP_LOGI(TAG, "hello from motor");
+
 
     int direct = 0;
     int proportion;
@@ -59,6 +63,8 @@ void PID_motor(void)
 
         vTaskDelay(CYCLETIME / portTICK_PERIOD_MS);
 
-        printf("M2 %i  CP %i  pwm %i direct %i \n", move_to, curr_pos, pwm, direct);
+        // printf("M2 %i  CP %i  pwm %i direct %i \n", move_to, curr_pos, pwm, direct);
+
+        ESP_LOGI(TAG, "M2 %i  CP %i  pwm %i direct %i \n", move_to, curr_pos, pwm, direct );
     }
 }
