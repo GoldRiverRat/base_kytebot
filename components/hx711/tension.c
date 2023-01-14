@@ -3,9 +3,10 @@
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <hx711.h>
-// #include <tension.h>
 
 static const char *TAG = "hx711-example";
+
+extern int left_tension;
 
 void tension(void)
 {
@@ -17,6 +18,7 @@ void tension(void)
 
     // initialize device
     ESP_ERROR_CHECK(hx711_init(&dev));
+    ESP_LOGI(TAG, "Hello from HX711 ADC");
 
     // read from device
     while (1)
@@ -36,7 +38,8 @@ void tension(void)
             continue;
         }
 
-        ESP_LOGI(TAG, "Raw data: %" PRIi32, data);
+        // ESP_LOGI(TAG, "Raw data: %" PRIi32, data);
+        left_tension = data;
         vTaskDelay(CYCLETIME / portTICK_PERIOD_MS);
     }
 }
