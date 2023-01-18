@@ -23,7 +23,7 @@ void tension(void)
     // read from device
     while (1)
     {
-        esp_err_t r = hx711_wait(&dev, 100);
+        esp_err_t r = hx711_wait(&dev, 120);
         if (r != ESP_OK)
         {
             ESP_LOGE(TAG, "Device not found: %d (%s)\n", r, esp_err_to_name(r));
@@ -38,9 +38,9 @@ void tension(void)
             continue;
         }
 
-        // ESP_LOGI(TAG, "Raw data: %" PRIi32, data);
+        ESP_LOGI(TAG, "Raw data: %" PRIi32, data);
         left_tension = data;
-        vTaskDelay(CYCLETIME / portTICK_PERIOD_MS);
+        // vTaskDelay(CYCLETIME / portTICK_PERIOD_MS);
     }
 }
 
