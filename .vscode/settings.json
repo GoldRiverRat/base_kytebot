@@ -3,7 +3,8 @@
   "files.associations": {
     "regex": "c",
     "esp_timer.h": "c",
-    "hx711.h": "c"
+    "hx711.h": "c",
+    "comms.h": "c"
   },
   "idf.adapterTargetName": "esp32",
   "git.ignoreLimitWarning": true,
